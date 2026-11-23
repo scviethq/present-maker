@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>present-maker</title>
+    <!--DECK-->
+  </head>
+  <body>
+    <div id="app">
+      <header class="top">
+        <div class="brand"><span class="dot"></span><span id="deck-title"></span></div>
+        <div class="tools">
+          <button class="tool" id="btn-notes" title="Ghi chú người nói (N)" aria-label="Ghi chú người nói"></button>
+          <button class="tool" id="btn-present" title="Chế độ trình chiếu (P)" aria-label="Chế độ trình chiếu" aria-pressed="false"></button>
+          <button class="tool" id="btn-theme" title="Sáng / tối (T)" aria-label="Đổi giao diện sáng tối"></button>
+          <button class="tool" id="btn-full" title="Toàn màn hình (F)" aria-label="Toàn màn hình"></button>
+        </div>
+      </header>
+      <main class="main">
+        <section class="panel" aria-live="polite"><div class="panel-inner" id="panel"></div></section>
+        <section class="stage" id="stage">
+          <div class="caption" id="caption"></div>
+          <div class="metrics" id="metrics"></div>
+          <div class="empty-hint" id="empty" hidden></div>
+        </section>
+      </main>
+      <footer class="bar">
+        <button class="nav" id="prev" aria-label="Bước trước"></button>
+        <ol class="steps" id="steps"></ol>
+        <span class="count" id="count"></span>
+        <button class="nav" id="next" aria-label="Bước sau"></button>
+      </footer>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
